@@ -1,0 +1,98 @@
+//@import '/public/css/map.css';
+
+
+.outerDiv{
+  display: flex;
+  height: 64px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1367px) {
+  .outerDiv{
+    min-width: 35%;
+  }
+}
+
+.home{
+  height: 64px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+}
+
+.item{
+  margin-right: 16px;
+  cursor: pointer;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.item:hover{
+  animation: jumpUp 0.3s ease forwards; /* 应用向上跳动的动画，并保持最终状态 */
+}
+
+@keyframes jumpUp {
+  0%, 100% {
+    transform: translateY(0); /* 初始和结束状态 */
+  }
+  50% {
+    transform: translateY(-4px); /* 中间状态，向上跳动 */
+  }
+}
+
+//popover的样式
+.popover {
+  top: 100%;
+  left: 0;
+  position: absolute;
+  transition: .3s;
+  z-index: 1;
+  padding: 8px 0 0 24px;
+}
+.popoverContent {
+  position: relative;
+  background-color: var(--bg1_float);
+  box-shadow: 0 0 30px rgba(0,0,0,.1);
+  border-radius: 8px;
+  border: 1px solid var(--line_regular);
+  color: var(--text1);
+}
+.biliHeaderChannelPanel {
+  display: flex;
+  padding: 16px 0;
+  text-align: left;
+}
+.channelPanelColumn {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  padding: 0 16px;
+  width: 152px;
+  border-right: 1px solid var(--line_regular);
+}
+.channelPanelItem {
+  display: flex;
+  align-items: center;
+  margin: 3px 0;
+  padding: 6px;
+  height: 32px;
+  border-radius: 4px;
+  color: var(--text1);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+.channelPanelItem:hover{
+  background-color: var(--graph_bg_thick);;
+}
+.navigationChannelIcon {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}

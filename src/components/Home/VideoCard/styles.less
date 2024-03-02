@@ -1,0 +1,171 @@
+@import '/public/css/map.css';
+
+.videoCard{
+  position: relative;
+}
+
+.videoCardWrap{
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: var(--bg1);
+}
+
+.cardImage{
+  position: relative;
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.imageWrap{
+  padding-top: 56.25%;
+  border-radius: inherit;
+  background-color: var(--graph_bg_regular);
+  cursor: pointer;
+}
+
+.videoCardCover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  background-color: var(--graph_bg_regular);
+}
+
+.videoCardMask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: all .2s linear .2s;
+  pointer-events: none;
+}
+
+.videoCardStats{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  padding: 16px 8px 6px;
+  width: 100%;
+  height: 38px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background-image: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);
+  color: #fff;
+  font-size: var(--subtitle-font-size);
+  line-height: var(--icon-size);
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.videoCardStatsLeft{
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.videoCardStatsItem{
+  margin-right: 12px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.videoCardStatsIcon{
+  margin-right: 2px;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  color: #fff;
+}
+
+.videoCardStatsText{
+  word-break: keep-all;
+}
+
+.videoCardInfo{
+  position: relative;
+  margin-top: var(--info-margin-top);
+  min-height: calc(var(--title-line-height) * 2 + var(--subtitle-line-height) + 4px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.videoCardInfoRight{
+  min-width: 0;
+  flex: 1;
+}
+
+.videoCardInfoTit{
+  padding-right: var(--title-padding-right);
+  color: var(--text1);
+  font-size: var(--title-font-size);
+  line-height: var(--title-line-height);
+  height: calc(2 * var(--title-line-height));
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-break: break-word!important;
+  line-break: anywhere;
+  -webkit-line-clamp: 2;
+}
+
+.videoCardInfoBottom{
+  margin-top: 4px;
+  color: var(--text3);
+  font-size: var(--subtitle-font-size);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.owner{
+  cursor: pointer;
+  transition: color .2s linear;
+  align-items: center;
+  justify-content: flex-start;
+  display: inline-flex;
+}
+
+.ownerUp{
+  margin-right: 2px;
+  width: var(--subtitle-line-height);
+  height: var(--subtitle-line-height);
+}
+
+.author{
+  flex: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-break: break-word!important;
+  line-break: anywhere;
+  -webkit-line-clamp: 1;
+  line-height: var(--subtitle-line-height);
+}
+
+.date{
+  margin-left: 4px;
+  line-height: var(--subtitle-line-height);
+}

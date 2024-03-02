@@ -1,0 +1,311 @@
+@import '/public/css/map.css';
+
+.outerDiv{
+  position: relative;
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.iconWrap{
+  list-style-type: none;
+  position: relative;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  cursor: pointer;
+}
+
+.iconLink{
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 0;
+  min-width: 50px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.icon{
+  margin-bottom: 2px;
+  transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+.iconWrap:hover .icon{
+  animation: jumpUp 0.3s ease forwards; /* 应用向上跳动的动画，并保持最终状态 */
+}
+
+@keyframes jumpUp {
+  0%, 100% {
+    transform: translateY(0); /* 初始和结束状态 */
+  }
+  50% {
+    transform: translateY(-4px); /* 中间状态，向上跳动 */
+  }
+}
+
+.uploadButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 34px;
+  background: #fb7299;
+  border: 0;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  transition: background-color .3s;
+
+}
+
+.uploadButton:hover{
+  background-color: #fc8bab;
+  color: white!important;
+}
+
+.biliAvatar {
+  box-sizing: content-box;
+  border: 2px solid #fff;
+  display: block;
+  position: relative;
+  background-image: url('/public/img/mock/avatar/1.png');
+  background-size: cover;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  width: 82px;
+  height: 82px;
+  transform: translate(0px, 0px);
+}
+.biliAvatarImg {
+  top: 0;
+  left: 0;
+  transform: translateZ(0);
+  will-change: transform;
+  border-radius: 50%;
+  border: none;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.popover{
+  padding-top: 12px;
+  margin-left: -12px;
+  transform: translate3d(-50%,0,0);
+  top: 100%;
+  left: 50%;
+  position: absolute;
+  transition: .3s;
+  z-index: 1;
+}
+.popoverContent{
+  position: relative;
+  background-color: var(--bg1_float);
+  box-shadow: 0 0 30px rgba(0,0,0,.1);
+  border-radius: 8px;
+  border: 1px solid var(--line_regular);
+  color: var(--text1);
+}
+.avatarPanelPopover {
+  padding: 0 24px 18px;
+  width: 300px;
+  border-radius: 8px;
+  background-color: var(--bg1_float);
+}
+.bigAvatar {
+  display: block;
+  margin-bottom: 4px;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+}
+.nicknameItem {
+  display: flex;
+  justify-content: center;
+  margin-top: -40px;
+  margin-bottom: 2px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.vipItem {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 0;
+}
+.seniorInfo {
+  display: flex;
+  align-items: center;
+}
+.senior {
+  display: inline-block;
+  width: 57px;
+  height: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--brand_blue);
+  border: 1px solid var(--brand_blue);
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-align: center;
+}
+.levelMax{
+  font-weight: 500;
+  display: inline-block;
+  margin-left: 4px;
+  width: 36px;
+  height: 14px;
+  line-height: 14px;
+}
+.levelIcon{
+  width: 100%;
+  height: 100%;
+  vertical-align: inherit;
+}
+
+.coinsItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+.coinItemText {
+  display: inline-block;
+  margin-right: 5px;
+  color: var(--text3);
+}
+.coinItemNum{
+  display: inline-block;
+  margin-right: 10px;
+  color: var(--text1);
+}
+
+.countsItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 0 20px;
+}
+.singleCountItem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: color .2s;
+  cursor: pointer;
+}
+.countNum {
+  font-weight: 500;
+  color: var(--text1);
+  font-size: 18px;
+  transition: color .2s;
+}
+.countText {
+  color: var(--text3);
+  font-weight: 400;
+  font-size: 12px;
+  transition: color .2s;
+}
+
+.singleLinkItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  padding: 0 14px;
+  height: 38px;
+  border-radius: 8px;
+  color: var(--text2);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color .3s;
+  white-space: nowrap;
+}
+.singleLinkItem:hover{
+  background-color: var(--graph_bg_thick);
+}
+.linkTitle {
+  display: flex;
+  align-items: center;
+}
+
+.splitLine {
+  margin: 10px 0;
+  width: 100%;
+  height: 1px;
+  background: var(--line_regular);
+}
+
+.logoutItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: var(--text2);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+.logoutItem:hover{
+  background-color: var(--graph_bg_thick);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes avatarFadeLarge {
+  0% {
+    opacity: 0;
+    transform: scale(.4) translateY(-2px) translate(3px);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(-36px,10px);
+  }
+}
+
+@keyframes avatarFadeSmall {
+  0% {
+    transform: scale(1) translate(-36px,10px);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(.4) translateY(-2px) translate(3px);
+  }
+}

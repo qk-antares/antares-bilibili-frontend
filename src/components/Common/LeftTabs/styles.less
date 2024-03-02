@@ -1,0 +1,67 @@
+.leftTabs{
+  overflow-y: auto;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 12px 0;
+  width: 150px;
+  height: 540px;
+  border-right: 1px solid var(--line_regular);
+  overscroll-behavior: none;
+}
+
+.tabItemActive{
+  background-color: var(--brand_blue);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 46px;
+  font-size: 14px;
+  line-height: 22px;
+  cursor: pointer;
+  transition: background-color .3s,color .3s;
+}
+
+.tabItem{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 46px;
+  color: var(--text1);
+  font-size: 14px;
+  line-height: 22px;
+  cursor: pointer;
+  transition: background-color .3s,color .3s;
+}
+
+.tabItemTitle{
+  overflow: hidden;
+  width: 85px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+}
+.tabItemTitleActive{
+  overflow: hidden;
+  width: 85px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+  background-color: var(--brand_blue);
+}
+
+.tabItemNumActive{
+  color: #fff;
+  word-break: normal;
+  font-size: 12px;
+  line-height: 20px;
+}
+.tabItemNum{
+  color: var(--text3);
+  word-break: normal;
+  font-size: 12px;
+  line-height: 20px;
+}
+

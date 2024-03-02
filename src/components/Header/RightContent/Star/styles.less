@@ -1,0 +1,194 @@
+.tabsPanelContent {
+  min-height: 172px;
+  max-height: 490px;
+  overflow-y: auto;
+  text-align: left;
+  overscroll-behavior: none;
+}
+
+.tipBox {
+  color: var(--text3);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.splitLine {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text3);
+  font-size: 12px;
+  margin: 0 20px;
+}
+
+.dynamicItem {
+  text-indent: inherit;
+  overflow: inherit;
+  text-overflow: inherit;
+  display: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text1);
+  -webkit-line-clamp: inherit;
+  -webkit-box-orient: inherit;
+}
+.dynamicItem:hover {
+  background-color: var(--graph_bg_thick);
+}
+.dynamicListItem {
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: .3s;
+}
+.dynamicContainer {
+  display: flex;
+  flex-direction: row;
+}
+.dynamicBoxLeft {
+  width: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.dynamicAvatar {
+  z-index: 2;
+  position: relative;
+  display: block;
+  width: 38px;
+  height: 38px;
+  border: 2px solid var(--graph_bg_thick);
+  border-radius: 50%;
+}
+.biliAvatar {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  background-image: url("/public/img/mock/avatar/1.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+.biliAvatarImg {
+  transform: translateZ(0);
+  will-change: transform;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: none;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.biliAvatarRightIcon {
+  width: 27.5%;
+  height: 27.5%;
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-image: url('/icons/personal.svg');
+}
+
+.dynamicBoxCenter {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 12px;
+}
+.dynamicNameLine {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--text2);
+}
+.userName {
+  display: inline-block;
+  a {
+    color: inherit;
+  }
+}
+.dynamicInfoContent {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  color: var(--text1);
+}
+.dynamicInfoContent:hover {
+  color: var(--text1);
+}
+.publishTime {
+  color: var(--text3);
+  display: inline-block;
+  font-size: 12px;
+}
+
+.dynamicBoxRight {
+  width: 64px;
+  position: relative;
+  top: 20px;
+  margin-bottom: 20px;
+}
+.cover {
+  width: 82px;
+  height: 46px;
+  border-radius: 4px;
+  background: var(--raph_bg_thick) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.img{
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  background-color: var(--graph_bg_regular);
+  img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: inherit;
+  }
+}
+
+
+.bottomBtn{
+  display: block;
+  margin: 16px 20px;
+  width: 330px;
+  height: 36px;
+  border-radius: 4px;
+  background: var(--bg2);
+  color: var(--text2);
+  text-align: center;
+  font-size: 14px;
+  line-height: 36px;
+  cursor: pointer;
+  transition: color .3s;
+}
+.bottomBtnIcon{
+  margin-left: 8px;
+  transform: rotate(-90deg);
+}
